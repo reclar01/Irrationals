@@ -3,19 +3,29 @@
 body{
 align-content: center;
     background: cornflowerblue;
+
 }
  h1 {
      text-align: center;
-    font-size: 35px;
+    font-size: 75px;
    color: rgb(32, 25, 25);
    font-family: 'Concert One', cursive;
  }
+ .header {
+      margin-right:auto;
+      margin-left: auto;
+      margin-top: -100px;
+      padding:10px;
+
+}
 h3 { 
     font-family: 'Concert One', cursive;
+    font-size:35px;
 }
  .container {
      margin-left: auto;
-     margin-right: auto;     
+     margin-right: auto; 
+     margin-top: auto;    
      width: 400px;
      text-align: center;
      padding: 100px;
@@ -24,11 +34,13 @@ h3 {
  }
   
  .letter-bank {
-    border:2px solid black;
+    border:5px solid black;
     background:rgb(151, 9, 9)
     ;
 }
-   
+   .category{
+       font-size:40p;
+   }
  
 
 
