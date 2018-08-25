@@ -1,5 +1,5 @@
 // let startButton = document.getElementById("start");
-let library = [{animal:"snake",fruit:"apple",name:"matthew"},{animal:"eagle",fruit:"orange",name:"dalton"},{animal:"lion",fruit:"lemon",name:"robert"}];
+let library = [{animal:["snake","lion","eagle","elephant","buffalo","squirrel","badger","alligator","bear","beaver"]},{fruit:["apple","orange","lemon","cherry","banana","blueberry","coconut","avocado","blackberry","grapefruit"]},{name:["matthew","dalton","robert","alissa","dreima","allen","alex","jessica","hannah","scott"]}];
 
 let rand = library[Math.floor(Math.random() * library.length)];
 
@@ -42,15 +42,15 @@ function clickSubmit(){
 }
 
 function pickAnswer(obj) {
-    let keys = Object.keys(obj)
-    return obj[keys[keys.length*Math.random()<<0]];
+    for (let key1 in obj){
+        let arr = obj[key1];
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
 }
 
-function findHint(obj,str) {
+function findHint(obj) {
     for (let key in obj) {
-        if (obj[key] === str) {
             return key;
-        }
     }
 }
 
