@@ -1,11 +1,13 @@
 <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
-.color one{
+
+body{
     background: rgba(68, 223, 202, 0.233);
 }
- .color two{
-     font-size: 24px
-     font-family: 
-          color:  cornsilk }
+ h1 {
+     text-align: center;
+    font-size: 24px;
+   color: cornsilk;
+ }
      
  
 
