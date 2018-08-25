@@ -10,6 +10,12 @@ align-content: center;
    color: rgb(32, 25, 25);
    font-family: 'Concert One', cursive;
  }
+ .container {
+     margin-left: auto;
+     margin-right: auto;
+     width: 50px;
+     text-align: center;
+ }
  
      
  
