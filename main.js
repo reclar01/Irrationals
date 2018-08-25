@@ -28,6 +28,12 @@ blankWordText = blankWordText.join("");
 blankWord.innerHTML = blankWordText;
 
 function clickSubmit(){
+    if(inputText.value.length > 1){
+        alert("Please only select one letter");
+        inputText.value = "";
+        return;
+    }
+    inputText.value = inputText.value.toLowerCase();
 if(inputText.value === ""){
     alert("Please submit a letter");
     return;
