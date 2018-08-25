@@ -16,7 +16,7 @@ align-content: center;
       margin-left: auto;
       margin-top: -100px;
       padding:10px;
-      
+
 }
 h3 { 
     font-family: 'Concert One', cursive;
@@ -34,7 +34,7 @@ h3 {
  }
   
  .letter-bank {
-    border:2px solid black;
+    border:5px solid black;
     background:rgb(151, 9, 9)
     ;
 }
