@@ -10,6 +10,12 @@ align-content: center;
    color: rgb(32, 25, 25);
    font-family: 'Concert One', cursive;
  }
+ .header {
+      margin-right:auto;
+      margin-left: auto;
+      margin-top: -100px;
+      padding:10px;
+}
 h3 { 
     font-family: 'Concert One', cursive;
     font-size:35px;
