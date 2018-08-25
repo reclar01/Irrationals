@@ -7,6 +7,9 @@ let answer = pickAnswer(rand);
 
 let hint = findHint(rand,answer);
 
+let mistakeLetters = document.getElementById("letter-bank");
+let mistakes = [];
+
 let submitButton = document.getElementById("input-button");
 let inputText = document.getElementById("input-text");
 
@@ -27,6 +30,10 @@ blankWord.innerHTML = blankWordText;
 function clickSubmit(){
     answer = answer.split("");
     blankWordText = blankWordText.split("");
+    if (answer.indexOf(inputText.value) < 0) {
+        mistakes.push(inputText.value);
+        console.log(mistakes);
+    }
     for(let j=0; j<answer.length; j++){
         if(inputText.value === answer[j]){
             blankWordText[j] = answer[j];
