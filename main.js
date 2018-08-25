@@ -16,7 +16,7 @@ let inputText = document.getElementById("input-text");
 
 let category = document.getElementById("category");
 
-category.innerHTML= "The word you are looking for is a " + hint;
+category.innerHTML= "Word Category: " + hint;
 
 let blankWord = document.getElementById("blank-word");
 let blankWordText = [];
@@ -32,10 +32,12 @@ function clickSubmit(){
     blankWordText = blankWordText.split("");
     if(mistakes.indexOf(inputText.value)>=0){
             alert("Letter already used");
+            inputText.value="";
             return;
     }
     if(blankWordText.indexOf(inputText.value)>=0){
         alert("Letter already used");
+        inputText.value="";
         return;
 }
     if (answer.indexOf(inputText.value) < 0) {
@@ -77,11 +79,14 @@ function clickSubmit(){
              answer= answer.join("");
              if(blankWordText === answer){
                  alert("You Win!");
+                 submitButton.parentNode.removeChild(submitButton);
              }
              mistakeLetters.innerHTML = mistakes;
              if(mistakes.length === 7){
                  alert("You Lose!");
+                 submitButton.parentNode.removeChild(submitButton);
              }
+             inputText.value="";
 }
 
 function pickAnswer(obj) {
