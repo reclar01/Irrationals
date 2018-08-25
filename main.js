@@ -39,6 +39,9 @@ function clickSubmit(){
     console.log(blankWordText);
      blankWordText = blankWordText.join("");
              answer= answer.join("");
+             if(blankWordText === answer){
+                 alert("You Win!");
+             }
 }
 
 function pickAnswer(obj) {
