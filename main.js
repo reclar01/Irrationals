@@ -6,7 +6,7 @@ let rand = library[Math.floor(Math.random() * library.length)];
 let answer = pickAnswer(rand);
 
 let hint = findHint(rand,answer);
-
+let img = document.getElementById("gallow");
 let mistakeLetters = document.getElementById("letter-bank");
 let mistakes = [];
 
@@ -41,6 +41,27 @@ function clickSubmit(){
     if (answer.indexOf(inputText.value) < 0) {
         mistakes.push(inputText.value);
         console.log(mistakes);
+        if(mistakes.length === 1){
+            img.src="images/head.jpg";
+        }
+        if(mistakes.length === 2){
+            img.src="images/body.jpg";
+        }
+        if(mistakes.length === 3){
+            img.src="images/arm1.jpg";
+        }
+        if(mistakes.length === 4){
+            img.src="images/arm2.jpg";
+        }
+        if(mistakes.length === 5){
+            img.src="images/leg1.jpg";
+        }
+        if(mistakes.length === 6){
+            img.src="images/leg2.jpg";
+        }
+        if(mistakes.length === 7){
+            img.src="images/didntdoit.jpg";
+        }
     }
     for(let j=0; j<answer.length; j++){
         if(inputText.value === answer[j]){
@@ -58,7 +79,7 @@ function clickSubmit(){
                  alert("You Win!");
              }
              mistakeLetters.innerHTML = mistakes;
-             if(mistakes.length === 6){
+             if(mistakes.length === 7){
                  alert("You Lose!");
              }
 }
