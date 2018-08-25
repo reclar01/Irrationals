@@ -28,16 +28,28 @@ blankWordText = blankWordText.join("");
 blankWord.innerHTML = blankWordText;
 
 function clickSubmit(){
+if(inputText.value === ""){
+    alert("Please submit a letter");
+    return;
+}
     answer = answer.split("");
     blankWordText = blankWordText.split("");
     if(mistakes.indexOf(inputText.value)>=0){
             alert("Letter already used");
+<<<<<<< HEAD
             inputText.value="";
+=======
+            inputText.value = "";
+>>>>>>> 2d9af175a66f29cc69207787caeb3d2d4824590a
             return;
     }
     if(blankWordText.indexOf(inputText.value)>=0){
         alert("Letter already used");
+<<<<<<< HEAD
         inputText.value="";
+=======
+        inputText.value = "";
+>>>>>>> 2d9af175a66f29cc69207787caeb3d2d4824590a
         return;
 }
     if (answer.indexOf(inputText.value) < 0) {
@@ -78,15 +90,27 @@ function clickSubmit(){
      blankWordText = blankWordText.join("");
              answer= answer.join("");
              if(blankWordText === answer){
+                submitButton.parentNode.removeChild(submitButton);
                  alert("You Win!");
+<<<<<<< HEAD
                  submitButton.parentNode.removeChild(submitButton);
+=======
+                 inputText.value = "";
+>>>>>>> 2d9af175a66f29cc69207787caeb3d2d4824590a
              }
              mistakeLetters.innerHTML = mistakes;
              if(mistakes.length === 7){
+                 submitButton.parentNode.removeChild(submitButton);
                  alert("You Lose!");
+<<<<<<< HEAD
                  submitButton.parentNode.removeChild(submitButton);
              }
              inputText.value="";
+=======
+                 inputText.value = "";
+             }
+             inputText.value = "";
+>>>>>>> 2d9af175a66f29cc69207787caeb3d2d4824590a
 }
 
 function pickAnswer(obj) {
