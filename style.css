@@ -13,8 +13,11 @@ align-content: center;
  .container {
      margin-left: auto;
      margin-right: auto;
-     width: 50px;
+     width: 200px;
      text-align: center;
+     padding: 25px;
+     border: 5px solid black;
+
  }
  
      
