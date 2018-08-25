@@ -28,14 +28,20 @@ blankWordText = blankWordText.join("");
 blankWord.innerHTML = blankWordText;
 
 function clickSubmit(){
+if(inputText.value === ""){
+    alert("Please submit a letter");
+    return;
+}
     answer = answer.split("");
     blankWordText = blankWordText.split("");
     if(mistakes.indexOf(inputText.value)>=0){
             alert("Letter already used");
+            inputText.value = "";
             return;
     }
     if(blankWordText.indexOf(inputText.value)>=0){
         alert("Letter already used");
+        inputText.value = "";
         return;
 }
     if (answer.indexOf(inputText.value) < 0) {
@@ -76,12 +82,17 @@ function clickSubmit(){
      blankWordText = blankWordText.join("");
              answer= answer.join("");
              if(blankWordText === answer){
+                submitButton.parentNode.removeChild(submitButton);
                  alert("You Win!");
+                 inputText.value = "";
              }
              mistakeLetters.innerHTML = mistakes;
              if(mistakes.length === 7){
+                 submitButton.parentNode.removeChild(submitButton);
                  alert("You Lose!");
+                 inputText.value = "";
              }
+             inputText.value = "";
 }
 
 function pickAnswer(obj) {
