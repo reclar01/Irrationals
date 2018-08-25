@@ -12,11 +12,13 @@ let category = document.getElementById("category");
 category.innerHTML= "The word you are looking for is a " + hint;
 
 let blankWord = document.getElementById("blank-word");
-let blankWordText = blankWord.innerHTML;
+let blankWordText=[];
 
 for(let i=0; i<answer.length; i++){
- blankWordText= blankWordText.push("-");
+   blankWordText.push("-");
 }
+blankWordText = blankWordText.join("");
+blankWord.innerHTML = blankWordText;
 
 function pickAnswer(obj) {
     let keys = Object.keys(obj)
