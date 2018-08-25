@@ -3,6 +3,7 @@
 body{
 align-content: center;
     background: cornflowerblue;
+
 }
  h1 {
      text-align: center;
@@ -15,6 +16,7 @@ align-content: center;
       margin-left: auto;
       margin-top: -100px;
       padding:10px;
+      
 }
 h3 { 
     font-family: 'Concert One', cursive;
