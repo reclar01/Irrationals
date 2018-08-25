@@ -1,4 +1,4 @@
-// let startButton = document.getElementById("start");
+
 let library = [{animal:["snake","lion","eagle","elephant","buffalo","squirrel","badger","alligator","bear","beaver"]},{fruit:["apple","orange","lemon","cherry","banana","blueberry","coconut","avocado","blackberry","grapefruit"]},{name:["matthew","dalton","robert","alissa","dreima","allen","alex","jessica","hannah","scott"]}];
 
 let rand = library[Math.floor(Math.random() * library.length)];
@@ -28,6 +28,12 @@ blankWordText = blankWordText.join("");
 blankWord.innerHTML = blankWordText;
 
 function clickSubmit(){
+    if(inputText.value === ""){
+        alert("Please select a letter");
+        return;
+    }
+    inputText.value = inputText.value.toLowerCase();
+
     answer = answer.split("");
     blankWordText = blankWordText.split("");
     if(mistakes.indexOf(inputText.value)>=0){
