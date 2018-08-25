@@ -30,6 +30,14 @@ blankWord.innerHTML = blankWordText;
 function clickSubmit(){
     answer = answer.split("");
     blankWordText = blankWordText.split("");
+    if(mistakes.indexOf(inputText.value)>=0){
+            alert("Letter already used");
+            return;
+    }
+    if(blankWordText.indexOf(inputText.value)>=0){
+        alert("Letter already used");
+        return;
+}
     if (answer.indexOf(inputText.value) < 0) {
         mistakes.push(inputText.value);
         console.log(mistakes);
@@ -48,6 +56,10 @@ function clickSubmit(){
              answer= answer.join("");
              if(blankWordText === answer){
                  alert("You Win!");
+             }
+             mistakeLetters.innerHTML = mistakes;
+             if(mistakes.length === 6){
+                 alert("You Lose!");
              }
 }
 
